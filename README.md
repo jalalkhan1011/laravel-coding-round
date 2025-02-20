@@ -93,6 +93,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         Route::put('tasks/{id}', [TaskController::class, 'update']); 
         Route::delete('tasks/{id}', [TaskController::class, 'destroy']);
 
+    10. please after clone project from git run the composer update commend. adn add .env file into the project.
+
         
         
 
