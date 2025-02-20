@@ -45,7 +45,7 @@ class PostController extends Controller
             return response()->json(['message' => 'Post not found'], 404);
         }
 
-        return response()->json($post);
+        return response()->json(["id" => $post->id, "title" => $post->title, "content" => $post->content, "created_at" => $post->created_at]);
     }
 
     /**
