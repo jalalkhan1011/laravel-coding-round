@@ -64,3 +64,36 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+##setup steps
+    1. Fist createa database in your local server
+    2. After created database run migration for default table migration.
+    3. Then migrate table for post api and run the migration commend for post table.
+    4. create model & for post.
+    5. install api route.
+    6. add folloing route for post api
+            Route::get('posts', [PostController::class, 'index']);
+            Route::post('posts', [PostController::class, 'store']);
+            Route::get('posts/{id}', [PostController::class, 'show']);
+            Route::put('posts/{id}', [PostController::class, 'update']);
+            Route::delete('posts/{id}', [PostController::class, 'destroy']);
+    7. test post api using postman. api route given bellow.
+        http://127.0.0.1:8000/api/posts method post
+        http://127.0.0.1:8000/api/posts method get
+        http://127.0.0.1:8000/api/posts/2 method get
+        http://127.0.0.1:8000/api/posts/2 method put
+
+    8. test register pai.
+        http://127.0.0.1:8000/api/register
+    9. test task api.
+        Route::get('tasks', [TaskController::class, 'index']);
+        Route::get('tasks/pending', [TaskController::class, 'pendingTask']);
+        Route::post('tasks', [TaskController::class, 'store']);
+        Route::get('tasks/{id}', [TaskController::class, 'show']);
+        Route::put('tasks/{id}', [TaskController::class, 'update']); 
+        Route::delete('tasks/{id}', [TaskController::class, 'destroy']);
+
+        
+        
+
+
