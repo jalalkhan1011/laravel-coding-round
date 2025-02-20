@@ -64,7 +64,7 @@ class PostController extends Controller
             'content' => $request->content ?? $post->content,
         ]);
 
-        return response()->json($post);
+        return response()->json(["id" => $post->id, "title" => $post->title, "content" => $post->content, "created_at" => $post->created_at]);
     }
 
     /**
